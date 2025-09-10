@@ -8,7 +8,9 @@
   body {
     margin: 15px 10px 0 10px;
     height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 6 colonnes égales */
+    gap: 10px; /* espace entre colonnes */;
     flex-direction: column;
   }
   
