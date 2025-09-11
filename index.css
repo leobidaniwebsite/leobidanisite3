@@ -65,8 +65,8 @@
 
 
 
-@media (max-width: 768px) {
-
-    grid-template-columns: 1fr; /* 1 seule colonne */
-
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+  }
 }
