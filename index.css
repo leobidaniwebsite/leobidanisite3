@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 6 colonnes égales */
     gap: 10px; /* espace entre colonnes */;
-    flex-direction: column;
+    
   }
 
  
@@ -65,8 +65,8 @@
 
 
 
-@media screen and (max-width: 500px) {
+@media (max-width: 768px) {
   body {
-    grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+    grid-template-columns: 1fr; /* 1 seule colonne */
   }
 }
