@@ -11,18 +11,19 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 6 colonnes égales */
     gap: 10px; /* espace entre colonnes */;
-    
+    box-sizing: border-box;
   }
 
  
 
   div {
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: left;
     text-align: left;
+    box-sizing: border-box;
   }
 
   img {
@@ -65,7 +66,7 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   body {
     grid-template-columns: 1fr; /* 1 seule colonne */
   }
