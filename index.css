@@ -49,9 +49,20 @@
     border-right:5px /* juste pour voir les colonnes */
   }
   
-  p{
+  h1{
     font-weight: 400;
     text-transform: uppercase;
+    font-family: 'dof-3';
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    font-size: 10px;
+    color: blue;
+  }
+
+  p{
+    font-weight: 400;
+    /*text-transform: uppercase;*/
     font-family: 'dof-3';
     margin: 0;
     padding: 0;
@@ -63,7 +74,7 @@
 .bleu { color: blue; }
 .vert { color: rgb(212, 61, 235); }
 .grune {color: rgb(13, 171, 45)}
-
+.blaw {color: rgb(0, 146, 171)}
 
 
 @media (max-width: 480px) {
