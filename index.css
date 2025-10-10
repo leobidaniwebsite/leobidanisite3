@@ -6,6 +6,7 @@
   }
   
   body {
+    background-color: grey;
     margin: 15px 10px 0 10px;
     height: 100vh;
     display: grid;
@@ -41,7 +42,7 @@
     padding: 0;
     line-height: 1.3;
     font-size: 10px;
-    color: rgb(68, 48, 48); /* place l'élément dans la 2ème colonne */
+    color: blue; /* place l'élément dans la 2ème colonne */
   }
 
   .texte-col1 {
@@ -53,14 +54,14 @@
     padding: 0;
     line-height: 1.3;
     font-size: 10px;
-    color: rgb(68, 48, 48);
+    color: blue;
 
   }
 
   .col1 {
     overflow-y: auto;   /* active le scroll vertical */
     border-right:5px;
-    background: rgba(243, 155, 247, 0.831);
+    background: rgba(172, 172, 172, 0.831);
   }
 
 
@@ -68,19 +69,19 @@
   .col2 {
     overflow-y: auto;   /* active le scroll vertical */
     border-right:5px;
-    background: rgba(221, 255, 0, 0.831);
+    background: rgba(172, 172, 172, 0.831);
   }
 
   .col3 {
     overflow-y: auto;   /* active le scroll vertical */
     border-right:5px;
-    background: rgba(98, 244, 169, 0.831);
+    background:rgba(172, 172, 172, 0.831);
   }
 
   .col4 {
     overflow-y: auto;   /* active le scroll vertical */
     border-right:5px;
-    background: rgba(122, 122, 122, 0.828);
+    background: rgba(172, 172, 172, 0.831);
   }
   
   h1{
