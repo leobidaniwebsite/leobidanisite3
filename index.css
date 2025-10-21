@@ -1,125 +1,158 @@
+/* ---------------------------
+   BASE SYSTEM
+----------------------------*/
+:root {
+  /* Typographie */
+  --font-family--primary: 'dof-3', sans-serif;
+  --font-size--base: 10px;
+  --line-height--base: 1.2;
+
+  /* Grille */
+  --grid--columns: 4;
+  --grid--gap: 3px;
+
+   /* Grille verticale */
+   --baseline-unit: calc(var(--font-size--base) * var(--line-height--base));
+   --baseline-multiple--small: calc(var(--baseline-unit) * 0.5);
+   --baseline-multiple--medium: var(--baseline-unit);
+   --baseline-multiple--large: calc(var(--baseline-unit) * 2);
+
+  /* Marges et padding */
+  --margin--global: 0px;
+  --padding--global: 10px;
+
+  /* Couleurs */
+  --color--background: rgb(255, 211, 253);
+  --color--text: rgb(0, 0, 0);
+  --color--accent1: rgb(0, 162, 255);
+  --color--accent2: rgb(212, 61, 235);
+  --color--accent3: rgb(136, 86, 0);
+  --color--accent4: rgb(197, 16, 229);
+
+  /* Bordures et structure */
+  --stroke--default: 1px;
+  --column--background: rgba(255, 255, 18, 0.831);
+
+  /* Z-index */
+  --z--menu: 50;
+}
+
+/* ---------------------------
+   TYPOGRAPHIE
+----------------------------*/
 @font-face {
-    font-family: 'dof-3';
-    src: url('fonts/dof-3-ext.ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  body {
-    background-color: grey;
-    margin: 15px 10px 0 10px;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 6 colonnes égales */
-    gap: 10px; /* espace entre colonnes */;
-    box-sizing: border-box;
-  }
-
- 
-
-  div {
-    width: 100%;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-    box-sizing: border-box;
-  }
-
-  img {
-    grid-column: 3; /* place l'image dans la 3ème colonne */
-    max-width: 100%;
-    height: auto;
-  }
-
-  .texte-col2 {
-    grid-column: 2;
-    font-weight: 400;
-    /*text-transform: uppercase;*/
-    font-family: 'dof-3';
-    margin: 0;
-    padding: 0;
-    line-height: 1.3;
-    font-size: 10px;
-    color: blue; /* place l'élément dans la 2ème colonne */
-  }
-
-  .texte-col1 {
-    grid-column: 1;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: 'dof-3';
-    margin: 0;
-    padding: 0;
-    line-height: 1.3;
-    font-size: 10px;
-    color: blue;
-
-  }
-
-  .col1 {
-    overflow-y: auto;   /* active le scroll vertical */
-    border-right:5px;
-    background: rgba(172, 172, 172, 0.831);
-  }
-
-
-
-  .col2 {
-    overflow-y: auto;   /* active le scroll vertical */
-    border-right:5px;
-    background: rgba(172, 172, 172, 0.831);
-  }
-
-  .col3 {
-    overflow-y: auto;   /* active le scroll vertical */
-    border-right:5px;
-    background:rgba(172, 172, 172, 0.831);
-  }
-
-  .col4 {
-    overflow-y: auto;   /* active le scroll vertical */
-    border-right:5px;
-    background: rgba(172, 172, 172, 0.831);
-  }
-  
-  h1{
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: 'dof-3';
-    margin: 0;
-    padding: 0;
-    line-height: 1.3;
-    font-size: 10px;
-    color: blue;
-  }
-
-  p{
-    font-weight: 400;
-    /*text-transform: uppercase;*/
-    font-family: 'dof-3';
-    margin: 0;
-    padding: 0;
-    line-height: 1.3;
-    font-size: 10px;
+  font-family: 'dof-3';
+  src: url('fonts/dof-3-ext.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.rouge { color: rgb(255, 77, 0); }
-.bleu { color: blue; }
-.vert { color: rgb(212, 61, 235); }
-.grune {color: rgb(197, 16, 229)}
-.brown {color: rgb(136, 86, 0)}
+body {
+  background-color: var(--color--background);
+  margin: var(--margin--global);
+  height: 100vh;
+  overflow: hidden;
 
+  display: grid;
+  grid-template-columns: repeat(var(--grid--columns), 1fr);
+  gap: var(--grid--gap);
 
-@media (max-width: 480px) {
-  body {
-    grid-template-columns: 1fr; /* 1 seule colonne */
-  }
+  box-sizing: border-box;
+  font-family: var(--font-family--primary);
+  font-size: var(--font-size--base);
+  line-height: var(--line-height--base);
+  color: var(--color--text);
+  background-size: 100% var(--baseline-unit);
+  /*background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px*/
+  
+  background-repeat: repeat-y;
 }
+
+
+
+/* ---------------------------
+   STRUCTURE DES COLONNES
+----------------------------*/
+.col1, .col2, .col3, .col4, .col5 {
+  overflow-y: auto;
+  scrollbar-width: none;     /* masque la scrollbar sur Firefox */
+  cursor: ns-resize; 
+  border-right: var(--stroke--default) solid var(--color--background);
+  background: var(--column--background);
+}
+
+/* ---------------------------
+   TEXTE ET ÉLÉMENTS
+----------------------------*/
+h1, p {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height--base);
+  font-size: var(--font-size--base);
+}
+
+h1 {
+  text-transform: uppercase;
+  color: var(--color--text);
+}
+
+p {
+  color: var(--color--text);
+}
+
+/* ---------------------------
+   CLASSES DE POSITION
+----------------------------*/
+.texte-col1 { grid-column: 1; }
+.texte-col2 { grid-column: 2; }
+.texte-col3 { grid-column: 3; }
+.texte-col4 { grid-column: 4; }
+
+.col1::-webkit-scrollbar,
+.col2::-webkit-scrollbar,
+.col3::-webkit-scrollbar,
+.col4::-webkit-scrollbar {
+  display: none;
+} 
+
+img {
+  grid-column: 3;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /*margin-top: var(--baseline-multiple--medium);
+  margin-bottom: var(--baseline-multiple--medium);*/
+  margin-bottom: var(--grid--gap  );
+}
+
+section {
+  padding-top: var(--baseline-multiple--large);
+  padding-bottom: var(--baseline-multiple--large);
+}
+
+/* ---------------------------
+   COULEURS UTILITAIRES
+----------------------------*/
+.rouge { color: var(--color--accent1); }
+.vert { color: var(--color--accent2); }
+.brown { color: var(--color--accent3); }
+.grune { color: var(--color--accent4); }
+.bleu { color: var(--color--text); }
 
 .chiffre { 
-  color: red;
+  color: var(--color--accent1);
   text-align: left;
 }
 
+/* ---------------------------
+   RESPONSIVE
+----------------------------*/
+@media (max-width: 480px) {
+  :root {
+    --grid--columns: 1;
+  }
+}
