@@ -3,8 +3,8 @@
 ----------------------------*/
 :root {
   /* Typographie */
-  --font-family--primary: 'HantarexMono-regular', sans-serif;
-  --font-size--base: 14px;
+  --font-family--primary: 'HantarexMono-Regular', sans-serif;
+  --font-size--base: 15px;
   --line-height--base: 1.2;
 
   /* Grille */
@@ -41,8 +41,8 @@
    TYPOGRAPHIE
 ----------------------------*/
 @font-face {
-  font-family: 'dof-3';
-  src: url('fonts/dof-3-ext.ttf');
+  font-family: 'HantarexMono-Regular';
+  src: url('fonts/HantarexMono-Regular.otf');
   font-weight: normal;
   font-style: normal;
 }
