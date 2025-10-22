@@ -152,8 +152,20 @@ section {
    RESPONSIVE
 ----------------------------*/
 @media (max-width: 480px) {
-  :root {
-    --grid--columns: 2;
-    --font--size: 7px;
+  /* 2 colonnes sur une seule “page-écran” */
+  .page-texte {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; /* pour 2 lignes de contenu si nécessaire */
+    height: 100vh;
+  }
+
+  .page-texte .col3 {
+    display: none; /* on masque la 3e colonne sur mobile */
+  }
+
+  .page-images {
+    height: 100vh; /* un autre “écran” */
+    overflow-y: scroll;
+    background: var(--color--background);
   }
 }
