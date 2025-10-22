@@ -153,6 +153,6 @@ section {
 ----------------------------*/
 @media (max-width: 480px) {
   :root {
-    --grid--columns: 1;
+    --grid--columns: 2;
   }
 }
