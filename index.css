@@ -152,20 +152,30 @@ section {
    RESPONSIVE
 ----------------------------*/
 @media (max-width: 480px) {
-  /* 2 colonnes sur une seule “page-écran” */
-  .page-texte {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; /* pour 2 lignes de contenu si nécessaire */
+  /* Premier écran : 2 colonnes côte à côte */
+  .zone-texte {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
     height: 100vh;
   }
 
-  .page-texte .col3 {
-    display: none; /* on masque la 3e colonne sur mobile */
+  .zone-texte .col1,
+  .zone-texte .col2 {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--column--background);
   }
 
-  .page-images {
-    height: 100vh; /* un autre “écran” */
+  .zone-texte .col3 {
+    display: none; /* On ne montre pas la 3e colonne ici */
+  }
+
+  /* Deuxième écran : images */
+  .zone-images {
+    height: 100vh;
     overflow-y: scroll;
     background: var(--color--background);
   }
-}
+} 
