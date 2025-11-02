@@ -22,8 +22,8 @@
   --padding--global: 10px;
 
   /* Couleurs */
-  --color--background: rgb(127, 78, 0);
-  --color--text: rgb(0, 0, 0);
+  --color--background: rgb(0, 0, 255);
+  --color--text: rgba(212, 208, 161, 0.266);
   --color--accent1: rgba(0, 162, 255, 0.305);
   --color--accent2: rgb(212, 61, 235);
   --color--accent3: rgb(136, 86, 0);
@@ -31,7 +31,7 @@
 
   /* Bordures et structure */
   --stroke--default: 1px;
-  --column--background: rgb(255, 255, 0);
+  --column--background: rgb(255, 255, 255);
 
   /* Z-index */
   --z--menu: 50;
