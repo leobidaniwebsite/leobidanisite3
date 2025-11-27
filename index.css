@@ -3,7 +3,7 @@
 ----------------------------*/
 :root {
   /* Typographie */
-  --font-family--primary: 'HantarexMono-Regular', sans-serif;
+  --font-family--primary: 'AkzidenzGrotesk-Light', sans-serif;
   --font-size--base: 15px;
   --line-height--base: 1.2;
 
@@ -23,7 +23,7 @@
 
   /* Couleurs */
   --color--background: rgb(0, 0, 0);
-  --color--text: rgba(212, 208, 161, 0.266);
+  --color--text: rgb(0, 0, 0);
   --color--accent1: rgb(255, 255, 255);
   --color--accent2: rgb(212, 61, 235);
   --color--accent3: rgb(136, 86, 0);
@@ -54,7 +54,7 @@ body {
   overflow: hidden;
 
   display: grid;
-  grid-template-columns: repeat(var(--grid--columns), 1fr);
+  /*grid-template-columns: repeat(var(--grid--columns), 1fr);*/
   gap: var(--grid--gap);
 
   box-sizing: border-box;
