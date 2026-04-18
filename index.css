@@ -9,7 +9,7 @@ a {
   font-family:'Pantera';
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 c {
@@ -18,7 +18,7 @@ c {
   font-family:'Pantera';
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 32px;
 }
 
@@ -28,7 +28,7 @@ d {
   font-family:'Pantera';
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 35px;
 }
 
@@ -38,7 +38,7 @@ e {
   font-family:'Pantera';
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 25px;
 }
 
@@ -48,7 +48,7 @@ f {
   font-family:'Pantera';
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 25px;
 }
 
@@ -58,7 +58,7 @@ g {
   font-family:'Pantera';
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 10px;
   line-height: 20px;
 }
 
@@ -68,7 +68,7 @@ h {
   font-family:'Pantera';
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 10px;
+  font-size: 5px;
   line-height: 15px;
 }
 
@@ -78,6 +78,6 @@ i {
   font-family:'Pantera';
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 5px;
+  font-size: 1px;
   line-height: 10px;
 }
